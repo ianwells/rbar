@@ -4,20 +4,18 @@ library(datasets)
 library(ggplot2)
 library(scales)
 
-datafile <- './tabc_ts_small.csv'
+datafile <- './tabc_ts_demo.csv'
 
 d <- read.csv(datafile)
+d$date <- as.Date(d$date, '%Y-%m-%d')
 
-plotBar <- function(barname)
+plotBarLines <- function(barnames,daterange)
 {
-  ggplot(data=subset(d,d$name == barname), aes(x=date,y=gross)) + geom_smooth(method = 'loess', aes(group=1)) + geom_point()+xlab('Year') + ylab('Gross Mixed Beverage Receipts ($)') + ggtitle(paste(barname, "Monthly Receipts (with fit)")) + scale_y_continuous(labels=comma)
+  ggplot(data=subset(d,d$name %in% barnames), aes(x=date,y=gross, group = name, colour = name, linetype = name)) + geom_line() + xlab('') + ylab('Gross Mixed Beverage Receipts ($)') + ggtitle(paste("")) + scale_y_continuous(labels=comma) + scale_x_date(breaks = date_breaks("6 months"), labels = date_format("%m/%Y")) + theme(axis.text.x = element_text(angle = 45, vjust = 0.25, hjust=0.5))
 }
 
-
-# Define server logic required to plot various variables against mpg
-shinyServer(function(input, output) {
-  
+shinyServer(function(input, output) {  
   output$tabcPlot <- renderPlot({
-    plotBar(input$bar)
+    plotBarLines(input$bars)
   })
 })
