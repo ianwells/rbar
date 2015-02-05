@@ -1,5 +1,7 @@
 library(shiny)
 
+demoevents = c('OTC Week','FPSF','Rodeo')
+
 demobars = c('Poison Girl' = 'POISON GIRL',
         'Catbirds' = 'CATBIRDS',
         'Anvil' = 'ANVIL',
@@ -36,8 +38,10 @@ shinyUI(fluidPage(
   titlePanel("TABC Gross Receipts"),
   plotOutput("tabcPlot"),  
   wellPanel(
-    selectInput("bars", "Bar:",multiple = TRUE,
-                demobars)
+    selectInput("bars", "Bars:",multiple = TRUE,
+                demobars),
+    selectInput("events", "Events:",multiple = TRUE,
+                demoevents)
     )
 
 ))
