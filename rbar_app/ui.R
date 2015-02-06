@@ -41,7 +41,9 @@ shinyUI(fluidPage(
     selectInput("bars", "Bars:",multiple = TRUE,
                 demobars),
     selectInput("events", "Events:",multiple = TRUE,
-                demoevents)
+                demoevents),
+    dateRangeInput("daterange", label = "Date range:", start = as.Date('2001-01-01'), end = as.Date('2015-01-01'), min = as.Date('2001-01-01'), max = as.Date('2016-01-01'), format = "yyyy-mm-dd", startview = "month")
+    
     )
 
 ))
