@@ -1,6 +1,6 @@
 library(shiny)
 
-demoevents = c('OTC Week','FPSF','Rodeo')
+demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Haloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week')
 
 demobars = c('Poison Girl' = 'POISON GIRL',
         'Catbirds' = 'CATBIRDS',
@@ -30,7 +30,18 @@ demobars = c('Poison Girl' = 'POISON GIRL',
         'Sunny\'s' = 'SUNNY\'S',
         'State Bar' = 'THE STATE BAR AND LOUNGE',
         'Flying Saucer' = 'THE FLYING SAUCER DRAUGHT EMPO',
-        'Public Services' = 'PUBLIC SERVICES BAR')   
+        'Public Services' = 'PUBLIC SERVICES BAR',
+
+
+'Toyota Center' = 'LEVY RESTAURANTS AT TOYOTA CEN',
+'Vic and Anthony\'s'='VIC AND ANTHONY\'S STEAKHOUSE',
+'Hotel Za Za' = 'HOTEL ZA ZA',
+'Reliant NRG Stadium' = 'ARAMARK SPORTS & ENTERTAINMENT',
+'Pappas Bros. Steakhouse' = 'PAPPAS BROS STEAKHOUSE',
+'Treasures' = 'TREASURES',
+'Ruth\'s Chris' = 'RUTH\'S CHRIS STEAKHOUSE',
+'Tony\'s' = 'TONY\'S',
+'Minute Maid Park' = '9 AMIGOS/CRAWFORD STREET CAFE/' )    
 
 shinyUI(fluidPage(
 
@@ -39,10 +50,13 @@ shinyUI(fluidPage(
   plotOutput("tabcPlot"),  
   wellPanel(
     selectInput("bars", "Bars:",multiple = TRUE,
-                demobars),
+                demobars, width = '100%'),
     selectInput("events", "Events:",multiple = TRUE,
-                demoevents),
-    dateRangeInput("daterange", label = "Date range:", start = as.Date('2001-01-01'), end = as.Date('2015-01-01'), min = as.Date('2001-01-01'), max = as.Date('2016-01-01'), format = "yyyy-mm-dd", startview = "month")
+                demoevents, width = '100%'),
+    dateRangeInput("daterange", label = "Date range:", start = as.Date('2001-01-01'), end = as.Date('2015-01-01'), min = as.Date('2001-01-01'), max = as.Date('2016-01-01'), format = "yyyy-mm-dd", startview = "month"),
+    radioButtons("style", label = "Style",
+                 choices = list("Lines" = 1, "Points" = 2), 
+                 selected = 1)
     
     )
 
