@@ -1,6 +1,6 @@
 library(shiny)
 
-demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Haloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week')
+demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Haloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week','Pride Parade')
 
 demobars = c('Poison Girl' = 'POISON GIRL',
         'Catbirds' = 'CATBIRDS',
