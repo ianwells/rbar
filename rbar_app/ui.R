@@ -1,8 +1,15 @@
 library(shiny)
 
-demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Haloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week','Pride Parade')
+demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Haloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week','Pride Parade','Holidays')
 
-demobars = c('Poison Girl' = 'POISON GIRL',
+demobars = c('Montrose (77006)' = 'Montrose (77006)',
+             'Midtown (77004)' = 'Midtown (77004)',
+             'Downtown (77002)' = 'Downtown (77002)',
+             'Galleria (77056)' = 'Galleria (77056)',
+             'Washington (77007)' = 'Washington (77007)',
+             'Richmond Strip (77057)' = 'Richmond Strip (77057)',
+             'Rice Village (77005)' = 'Rice Village (77005)',
+        'Poison Girl' = 'POISON GIRL',
         'Catbirds' = 'CATBIRDS',
         'Anvil' = 'ANVIL',
         'Boondocks' = 'BOONDOCKS',
@@ -31,8 +38,6 @@ demobars = c('Poison Girl' = 'POISON GIRL',
         'State Bar' = 'THE STATE BAR AND LOUNGE',
         'Flying Saucer' = 'THE FLYING SAUCER DRAUGHT EMPO',
         'Public Services' = 'PUBLIC SERVICES BAR',
-
-
 'Toyota Center' = 'LEVY RESTAURANTS AT TOYOTA CEN',
 'Vic and Anthony\'s'='VIC AND ANTHONY\'S STEAKHOUSE',
 'Hotel Za Za' = 'HOTEL ZA ZA',
