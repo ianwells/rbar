@@ -1,6 +1,8 @@
 # rbar
 Playing around with R/Shiny/TABC Data
 
+Thanks to http://zetashapes.com/ for the neighborhood geojson!
+
 To install R and Shiny and Shiny Server on a AWS EC2 Ubuntu Instance:
 
 $ cd /etc/apt/; vi sources.list
