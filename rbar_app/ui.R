@@ -2,13 +2,10 @@ library(shiny)
 
 demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Haloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week','Pride Parade','Holidays')
 
-demobars = c('Montrose (77006)' = 'Montrose (77006)',
-             'Midtown (77004)' = 'Midtown (77004)',
-             'Downtown (77002)' = 'Downtown (77002)',
-             'Galleria (77056)' = 'Galleria (77056)',
-             'Washington (77007)' = 'Washington (77007)',
-             'Richmond Strip (77057)' = 'Richmond Strip (77057)',
-             'Rice Village (77005)' = 'Rice Village (77005)',
+demobars = c('Montrose' = 'Montrose',
+             'Midtown' = 'Midtown',
+             'Downtown' = 'Downtown',
+             'Washington' = 'Washington',
         'Poison Girl' = 'POISON GIRL',
         'Catbirds' = 'CATBIRDS',
         'Anvil' = 'ANVIL',
