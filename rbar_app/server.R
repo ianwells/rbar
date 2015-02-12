@@ -4,7 +4,7 @@ library(datasets)
 library(ggplot2)
 library(scales)
 
-datafile <- './tabc_ts_demo.csv'
+datafile <- './tabc_ts.csv'
 eventsfile <- './events.csv'
 
 d <- read.csv(datafile)
