@@ -2,7 +2,7 @@ library(shiny)
 
 demoevents = c('OTC Week','FPSF','Rodeo','Baseball Season','Football Season','Basketball Season','Baseball Season','Hurricane Ike','Hurricane Rita','Hurricane Katrina','NBA All Star Game','MLB All Star Game','Superbowl XXXVIII','Halloween','New Years','Spring Break','School Year','Light Rail Opens','Restaurant Week','Pride Parade','Holidays')
 
-b = read.csv('./bars.csv')[,'name']
+b = lapply(read.csv('./bars.csv')[,'name'], as.character)
 
 shinyUI(fluidPage(
 
