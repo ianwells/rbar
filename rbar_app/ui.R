@@ -17,7 +17,12 @@ shinyUI(fluidPage(
     dateRangeInput("daterange", label = "Date range:", start = as.Date('2003-01-01'), end = as.Date('2015-01-01'), min = as.Date('2001-01-01'), max = as.Date('2016-01-01'), format = "yyyy-mm-dd", startview = "month"),
     radioButtons("style", label = "Style",
                  choices = list("Lines" = 1, "Points" = 2), 
-                 selected = 1)
+                 selected = 1),
+    h5("Code and data on github.com/ianwells/rbar."),
+    h6("Civic data from http://www.window.state.tx.us/taxinfo/taxfiles.html"),
+    h6("The Comptroller of Public Accounts cannot vouch for the data or analysis derived from data after it has been retrieved from the Comptroller's Web site.")
+
+    
     
     )
 
