@@ -1,26 +1,31 @@
-# rbar
+## rbar
 Playing around with R/Shiny/TABC Data
+
+Occasionally (temporarily) hosted on:
+http://ec2-52-88-239-28.us-west-2.compute.amazonaws.com:3838/rbar_app/
+
+#Browse Time-Series TABC Gross Receipts 
+Here are the extrapolated revenues for a bunch of liquor license holders in Houston, TX.  Compare bars!  Compare neighborhoods!  See the rise and fall and rise of the downtown bar scene!
+
+#Compare to Interesting Events
+What happened to Montrose bar sales during Hurricane Ike?  Who sees a sales spike during football season?  
+
+![](https://github.com/ianwells/rbar/screenshot.png "Looks good!")
 
 Thanks to http://zetashapes.com/ for the neighborhood geojson!
 
-To install R and Shiny and Shiny Server on a AWS EC2 Ubuntu Instance:
+#Source
 
-$ cd /etc/apt/; vi sources.list
+This data comes from http://www.window.state.tx.us/taxinfo/taxfiles.html
 
-add   deb http://http://cran.cnr.Berkeley.edu//bin/linux/ubuntu trusty/
-or don't
+They request that I add this notice:
 
-$ sudo apt-get install r-base
+"The Comptroller of Public Accounts cannot vouch for the data or analysis derived from data after it has been retrieved from the Comptroller's Web site."
 
-$ sudo su - \
--c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
+Lots more Texas civic data at http://www.texastransparency.org/Data_Center/Search_Datasets.php!
 
-$ sudo apt-get install gdebi-core
-$ wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
-$ sudo gdebi shiny-server-1.3.0.403-amd64.deb
+You might also like my other more popular project, https://github.com/ianwells/tabc
 
-To install ggplot2 and whatever other libraries you think are cool to your instance, you'll need to 
+http://www.houstoniamag.com/eat-and-drink/gastronaut/articles/the-tk-most-interesting-things-we-learned-from-this-tabc-map-january-2015
 
-$ sudo R
-$ install.packages("ggplot2", lib = "/usr/local/lib/R/site-library")
 
