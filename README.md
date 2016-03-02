@@ -1,6 +1,8 @@
 ## rbar
 Playing around with R/Shiny/TABC Data
 
+![](https://github.com/ianwells/rbar/blob/master/screenshot.png "Looks good!")
+
 Occasionally (temporarily) hosted on:
 http://ec2-52-88-239-28.us-west-2.compute.amazonaws.com:3838/rbar_app/
 
@@ -10,7 +12,6 @@ Here are the extrapolated revenues for a bunch of liquor license holders in Hous
 #Compare to Interesting Events
 What happened to Montrose bar sales during Hurricane Ike?  Who sees a sales spike during football season?  
 
-![](https://github.com/ianwells/rbar/screenshot.png "Looks good!")
 
 Thanks to http://zetashapes.com/ for the neighborhood geojson!
 
