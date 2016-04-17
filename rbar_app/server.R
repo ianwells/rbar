@@ -15,13 +15,38 @@ e$end <- as.Date(e$end, '%Y-%m-%d')
 
 plotBarLines <- function(barnames,eventnames,daterange,style)
 {  
+  print(barnames)
   bsub <- subset(d,d$name %in% barnames)
   esub <- subset(e,e$name %in% eventnames)
  
-  if ((style) == 2) {
-    plot = ggplot(data=bsub, mapping = aes(x=date,y=gross, colour = name)) + geom_smooth(method=loess)+ geom_point() + xlab('') + ylab('Gross Mixed Beverage Receipts ($)') + ggtitle(paste("")) + scale_y_continuous(labels=comma) + scale_x_date(breaks = date_breaks("6 months"), labels = date_format("%m/%Y"), limits = daterange) + theme(axis.text.x = element_text(angle = 45, vjust = 0.25, hjust=0.5),legend.title=element_blank()) 
-  } else {
-    plot = ggplot(data=bsub, mapping = aes(x=date,y=gross, colour = name)) + geom_line() + xlab('') + ylab('Gross Mixed Beverage Receipts ($)') + ggtitle(paste("")) + scale_y_continuous(labels=comma) + scale_x_date(breaks = date_breaks("6 months"), labels = date_format("%m/%Y"), limits = daterange) + theme(axis.text.x = element_text(angle = 45, vjust = 0.25, hjust=0.5),legend.title=element_blank()) 
+  if (style == 3) {
+    plot = ggplot(data=bsub, mapping = aes(x=date,y=gross, colour = name, fill = name)) + 
+      geom_area() + 
+      xlab('') + 
+      ylab('Gross Mixed Beverage Receipts ($)') + 
+      ggtitle(paste("")) + 
+      scale_y_continuous(labels=comma) + 
+      scale_x_date(breaks = date_breaks("6 months"), labels = date_format("%m/%Y"), limits = daterange) + 
+      theme(axis.text.x = element_text(angle = 45, vjust = 0.25, hjust=0.5),legend.title=element_blank()) 
+  } else if (style == 2) {
+    plot = ggplot(data=bsub, mapping = aes(x=date,y=gross, colour = name)) + 
+      geom_smooth(method=loess)+ 
+      geom_point() + 
+      xlab('') + 
+      ylab('Gross Mixed Beverage Receipts ($)') + 
+      ggtitle(paste("")) + 
+      scale_y_continuous(labels=comma) + 
+      scale_x_date(breaks = date_breaks("6 months"), labels = date_format("%m/%Y"), limits = daterange) + 
+      theme(axis.text.x = element_text(angle = 45, vjust = 0.25, hjust=0.5),legend.title=element_blank()) 
+  } else if (style == 1) {
+    plot = ggplot(data=bsub, mapping = aes(x=date,y=gross, colour = name)) + 
+      geom_line() + 
+      xlab('') + 
+      ylab('Gross Mixed Beverage Receipts ($)') + 
+      ggtitle(paste("")) + 
+      scale_y_continuous(labels=comma) + 
+      scale_x_date(breaks = date_breaks("6 months"), labels = date_format("%m/%Y"), limits = daterange) + 
+      theme(axis.text.x = element_text(angle = 45, vjust = 0.25, hjust=0.5),legend.title=element_blank()) 
   }
   
   events <- geom_rect(data=esub, mapping = aes(xmin=begin, xmax=end), ymin=-Inf, ymax=+Inf, color="grey20", alpha=0.3, inherit.aes = FALSE)
