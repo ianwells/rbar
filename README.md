@@ -3,8 +3,7 @@ Playing around with R/Shiny/TABC Data
 
 ![](https://github.com/ianwells/rbar/blob/master/screenshot.png "Looks good!")
 
-Occasionally (temporarily) hosted on:
-http://ec2-52-88-239-28.us-west-2.compute.amazonaws.com:3838/rbar_app/
+https://ianwells.shinyapps.io/tabc_sales_timeseries/
 
 #Browse Time-Series TABC Gross Receipts 
 Here are the extrapolated revenues for a bunch of liquor license holders in Houston, TX.  Compare bars!  Compare neighborhoods!  See the rise and fall and rise of the downtown bar scene!
